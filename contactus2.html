@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTACTUS</title>
+</head>
+<style>
+   *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+   }
+   body{
+    font-family:'outfit';
+    background-image: url(https://i.pinimg.com/736x/9a/22/2b/9a222bca6f80f716838b035d05f3f111.jpg);
+   } 
+   .contact-container{
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+   }
+   .contact-left{
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    gap:20px;
+
+   }
+   .contact-left-title h2{
+    font-weight:600;
+    color:darkblue;
+    font-size:40px;
+    margin-bottom:5px;
+}
+.contact-left-title hr{
+    border:none;
+    width:120px;
+    height:5px;
+    background-color:darkblue;
+    border-radius:10px;
+    margin-bottom:20px;
+
+
+}
+    .contact-inputs{
+        width:400px;
+        height:50px;
+        border:none;
+        outline:none;
+        padding-left:25px;
+        font-weight:500;
+        color:#666;
+        border-radius:50px;
+    }
+    .contact-left textarea{
+        height:140px;
+        padding-top:15px;
+        border-radius:20px;
+
+    }
+.contact-inputs:focus{
+    border:2px solid #ff994f;
+}
+.contact-inputs:placeholder{
+    color:#a9a9a9;
+
+}
+.contact-left button{
+    display:flex;
+    align-items:center;
+    padding:15px 30px;
+    font-size:16px;
+    color:#fff;
+    gap:10px;
+    border:none;
+    border-radius:50px;
+    background:lightskyblue;
+}
+.cntact-right img{
+    width:500px;
+}
+@media (max-width:800px){
+    .contact-inputs{
+        width:80vw;
+    }
+    .contact-right{
+        display:none;
+    }
+}
+</style>
+<body>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contatc-left-title">
+                <h2> GET IN TOUCH</h2>
+                <HR>
+            </div>
+            <input type="hidden" name="access_key" value="fadb6721-5cec-452c-8d20-baa0f206abfb">
+
+            <input type="text" name="name" placeholder="YOUR NAME" class=" contact-inputs" required>
+            <input type="email" name="email" placeholder="EMAIIL" class=" contact-inputs" required>
+            <textarea name="message" placeholder="YOUR MESSAGE" class="contact-inputs" required></textarea>
+        <button type="submit"> SEND MESSAGE</button>
+        </form>
+        <DIV CLASS="CONTACT-RIGHT">
+            <IMG src="https://i.pinimg.com/736x/08/fb/73/08fb73cafc5a9d1d888aa6fcee6ce7cb.jpg" height="600px" width="500px">
+        </DIV>
+    </div>
+</body>
+          
