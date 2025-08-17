@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero-gradient py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 text-center">
+                <h1 class="display-5 fw-bold heading">Discover and book extracurriculars near you</h1>
+                <p class="text-muted lead">Art, sports, STEM, music, and more — tailored for every age</p>
+                <div class="glass-search p-3 mt-4">
+                    <form class="row g-2 align-items-center">
+                        <div class="col-12 col-md-5">
+                            <input type="text" class="form-control form-control-lg" placeholder="Interest e.g. Art, Football, Coding">
+                        </div>
+                        <div class="col-7 col-md-4">
+                            <input type="text" class="form-control form-control-lg" placeholder="Location e.g. Indiranagar">
+                        </div>
+                        <div class="col-5 col-md-2">
+                            <input type="number" class="form-control form-control-lg" placeholder="Age">
+                        </div>
+                        <div class="col-12 col-md-1 d-grid">
+                            <button class="btn btn-primary btn-lg" type="submit">Search</button>
+                        </div>
+                    </form>
+                    <div class="d-flex flex-wrap gap-2 mt-3 justify-content-center">
+                        <span class="chip">Weekend only</span>
+                        <span class="chip">Free trial</span>
+                        <span class="chip">Under ₹999</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="d-flex align-items-baseline justify-content-between mb-3">
+            <h2 class="section-title">Trending near you</h2>
+            <a href="#" class="text-decoration-none">See all →</a>
+        </div>
+
+        <div class="masonry" id="listingMasonry">
+            {% for item in listings %}
+            <a href="#" class="card card-glass masonry-item mb-4 text-reset text-decoration-none">
+                <img src="{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <span class="badge bg-category">{{ item.category }}</span>
+                        <span class="text-muted small">{{ item.age_range }} yrs</span>
+                    </div>
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold">₹{{ item.price }}</span>
+                        <span class="text-muted small">{{ item.location }}</span>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
