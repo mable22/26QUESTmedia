@@ -5,4 +5,5 @@ app_name = 'listings'
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('explore/', views.explore, name='explore'),
 ]
