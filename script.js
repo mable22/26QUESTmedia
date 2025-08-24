@@ -165,7 +165,7 @@ function renderActivityCard(a) {
       <div class="card-actions">
         <button class="btn-outline" data-action="save">♡ Save</button>
         <button class="btn-outline" data-action="compare">⇄ Compare</button>
-        <a class="btn" href="/workspace/listing.html?id=${a.id}">🎟️ Book Trial</a>
+        <a class="btn" href="./listing.html?id=${a.id}">🎟️ Book Trial</a>
       </div>
     </article>
   `;
@@ -181,7 +181,7 @@ function renderActivities(container, activities) {
 
 function renderCategories(container) {
   container.innerHTML = TOP_CATEGORIES.map(c => `
-    <a class="tile" href="/workspace/explore.html?category=${encodeURIComponent(c.name)}" style="border-left: 6px solid ${c.color}">
+    <a class="tile" href="./explore.html?category=${encodeURIComponent(c.name)}" style="border-left: 6px solid ${c.color}">
       <span class="icon">${c.icon}</span>
       <div>
         <div class="card-title">${c.name}</div>
@@ -193,7 +193,7 @@ function renderCategories(container) {
 
 function renderCollections(container) {
   container.innerHTML = COLLECTIONS.map(c => `
-    <a class="card" href="/workspace/explore.html?collection=${encodeURIComponent(c.title)}">
+    <a class="card" href="./explore.html?collection=${encodeURIComponent(c.title)}">
       <div class="card-image"><img src="${c.image}" alt="${c.title}"/></div>
       <div class="card-content">
         <div class="card-title">${c.title}</div>
