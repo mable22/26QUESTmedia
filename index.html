@@ -1,5 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NONSCHOLASTIC — Discover extracurriculars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/workspace/style.css" />
+    <meta name="theme-color" content="#FF6A8A" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a class="brand" href="/workspace/index.html" aria-label="NONSCHOLASTIC home">
+          <span class="brand-mark"></span>
+          <span>NONSCHOLASTIC</span>
+        </a>
+        <nav class="nav-links">
+          <a class="nav-link" href="/workspace/index.html">Home</a>
+          <a class="nav-link" href="/workspace/explore.html">Explore</a>
+          <a class="nav-link" href="/workspace/listing.html">Listing</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="darkToggle" class="btn-outline" aria-pressed="false" aria-label="Toggle dark mode">🌙</button>
+          <button class="btn">Sign in</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Find fun, enriching activities near you</h1>
+        <p class="hero-sub">From sports to STEM — book trials, compare providers, and enroll with ease.</p>
+
+        <div class="search" role="search" aria-label="Search activities">
+          <div class="search-row">
+            <div class="field">
+              <span>🔎</span>
+              <input id="q" type="text" placeholder="What do you want to learn?" />
+            </div>
+            <div class="field">
+              <span>📍</span>
+              <select id="loc">
+                <option value="">Location</option>
+                <option>Indiranagar</option>
+                <option>HSR Layout</option>
+                <option>Koramangala</option>
+                <option>Whitefield</option>
+              </select>
+            </div>
+            <div class="field">
+              <span>🎂</span>
+              <select id="age">
+                <option value="">Age</option>
+                <option value="4-7">4–7</option>
+                <option value="8-12">8–12</option>
+                <option value="13-16">13–16</option>
+              </select>
+            </div>
+            <div class="actions">
+              <button id="searchBtn" class="btn-secondary">Search</button>
+            </div>
+          </div>
+          <div class="quick-filters" aria-label="Quick filters">
+            <button class="chip" data-filter="weekend">Weekend only</button>
+            <button class="chip" data-filter="trial">Free trial</button>
+            <button class="chip" data-filter="under999">Under ₹999</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <!-- Nearby This Week -->
+      <section class="section" id="nearby">
+        <div class="section-header">
+          <h2>Nearby This Week</h2>
+          <div class="section-actions">
+            <a class="btn-outline" href="/workspace/explore.html">See all</a>
+          </div>
+        </div>
+        <div id="nearbyGrid" class="grid-masonry" aria-live="polite">
+          <!-- Skeletons initially -->
+        </div>
+      </section>
+
+      <!-- Top Categories -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Top Categories</h2>
+        </div>
+        <div class="tiles" id="topCategories">
+          <!-- Filled by JS -->
+        </div>
+      </section>
+
+      <!-- Collections -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Collections</h2>
+        </div>
+        <div class="h-scroll" id="collections">
+          <!-- Filled by JS -->
+        </div>
+      </section>
+
+      <!-- Trusted Providers -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Trusted Providers</h2>
+        </div>
+        <div class="providers" id="providers">
+          <!-- Filled by JS -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> NONSCHOLASTIC</div>
+        <div class="row" style="justify-content:center;">
+          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#">Privacy</a>
+        </div>
+        <div class="row" style="justify-content:end;">
+          <span class="muted">Playful, pastel, and clean</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bottom nav (mobile) -->
+    <nav class="bottom-nav">
+      <div class="items">
+        <a class="active" href="/workspace/index.html">🏠 Home</a>
+        <a href="/workspace/explore.html">🔎 Explore</a>
+        <a href="#">♡ Saved</a>
+        <a href="#">👤 Profile</a>
+      </div>
+    </nav>
+
+    <script src="/workspace/script.js"></script>
+  </body>
+  </html>
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
